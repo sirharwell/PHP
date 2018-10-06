@@ -205,3 +205,135 @@ EOD;
 			echo 'Biggest Number is ' . $biggestNum;
 
 			echo "</br></br>";
+
+
+			// Switch provides different actions depending upon values
+
+			switch($usersName) {
+
+				case "Derek" :
+					echo "Hello Derek";
+					break;
+
+				case "Sally" :
+					echo "Hello Sally";
+					break;
+
+				default :
+					echo "Hello Valued Customer";
+					break;
+			}
+
+			echo "</br></br>";
+
+			// The while loop performs actions until a condition is met
+
+			$num = 0;
+
+			while($num < 20){
+
+				echo ++$num . ', ';
+
+			}
+
+			echo "</br></br>";
+
+			// The for loop performs actions until a condition is met
+			// like the while, but it a compact way
+
+			for($num = 1; $num <= 20; $num++){
+
+				echo $num;
+
+				if($num != 20){
+					echo ', ';
+				} else {
+					break; // or exit() to leave the whole script
+				}
+
+			}
+
+			echo "</br></br>";
+
+			// An array can store multiple values
+
+			$bestFriends = array('Joy', 'Willow', 'Ivy');
+
+			// You can access an item by index starting with 0
+
+			echo 'My wife ' . $bestFriends[0];
+
+			echo "</br></br>";
+
+			// You can add an item by storing in a unused index
+
+			$bestFriends[4] = 'Steve';
+
+			echo 'My friend ' . $bestFriends[4];
+
+			echo "</br></br>";
+
+			// You could cycle through the array with for or foreach
+
+			foreach($bestFriends as $friend){
+
+				echo $friend . ', ';
+
+			}
+
+			echo "</br></br>";
+
+			// You can create key value pairs in arrays
+
+			$customer = array('Name'=>$usersName, 'Street'=>$streetAddress, 'City'=>$cityAddress);
+
+			foreach($customer as $key => $value){
+
+				echo $key . ' : ' . $value . '</br>';
+
+			}
+
+			echo "</br></br>";
+
+			// You can combine arrays with +
+
+			$bestFriends = $bestFriends + $customer;
+
+			foreach($bestFriends as $friend){
+
+				echo $friend . ', ';
+
+			}
+
+			// Other common array operators
+			// == : Returns true of false if arrays are equal
+			// != : Returns if not equal
+			// === : Returns if the same items, same order and data type
+
+			echo "</br></br>";
+
+			// Multidimensional arrays are arrays in arrays
+
+			$customers = array(array('Derek', '123 Main', '15212'),
+							   array('Sue', '124 Main', '15222'),
+							   array('Bob', '125 Main', '15212'));
+
+			for($row = 0; $row < 3; $row++){
+
+				for($col = 0; $col < 3; $col++){
+
+					echo $customers[$row][$col] . ', ';
+
+				}
+				echo '</br>';
+
+			}
+
+			// Common Array Functions
+			// sort($yourArray) : Sorts in ascending alphabetical order or
+			// if you add , SORT_NUMERIC or , SORT_STRING
+			// asort($yourArray) : sorts arrays with keys
+			// ksort($yourArray) : sorts by the key
+			// Put a r infront of the above to sort in reverse order
+
+			echo "</br></br>";
