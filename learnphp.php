@@ -109,3 +109,53 @@
 EOD;
 
 			echo $str;
+
+			/*
+				You can define constants thats value can't change
+				When we call for a constant we don't use a $ and
+				they are normally uppercase
+			*/
+			define('PI', 3.1415926);
+
+			echo "The value of PI is " . PI;
+
+			// Arithmetic operators
+			echo "</br></br>5 + 2 = " . (5 + 2);
+			echo "</br>5 - 2 = " . (5 - 2);
+			echo "</br>5 * 2 = " . (5 * 2);
+
+			// You can cast from 1 type to another like this
+			echo "</br>5 / 2 = " . (integer) (5 / 2);
+			echo "</br>5 % 2 = " . (5 % 2) . "</br></br>";
+
+			// Use this shortcut when performing an operation using
+			// the same variable +=, -=, *=, /=, %=, .=
+
+			$randNum = 5;
+			echo $randNum += 5;
+
+			echo "</br></br>";
+
+			// You can increment and decrement with this shortcut
+
+			echo "++randNum = " . ++$randNum . "</br>";
+			echo "randNum++ = " . $randNum++;
+
+			echo "</br></br>";
+
+			/*
+				The reference operator (ampersan / &) can create a
+				reference to a variable so if one changes so does the
+				other
+			*/
+			$refToNum = &$randNum;
+			$randNum = 100;
+			echo '$refToNum = ' . $refToNum;
+
+			echo "</br></br>";
+
+			// Comparison Operators : ==, !=, <, >, <=, >=
+			// === (Equal & Same Type), !== (Not Equal or Same Type)
+			// An if block will perform one action or another depending
+			// on conditions
+			if(5 == 10){
