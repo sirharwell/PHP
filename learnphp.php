@@ -337,3 +337,162 @@ EOD;
 			// Put a r infront of the above to sort in reverse order
 
 			echo "</br></br>";
+
+
+			// Strings store a series of characters
+
+			$randString = "         Random String       ";
+
+			// You can trim white space with ltrim, rtrim, or trim
+
+			echo strlen($randString) . "</br>";
+			echo strlen(ltrim($randString)) . "</br>";
+			echo strlen(rtrim($randString)) . "</br>";
+			echo strlen(trim($randString)) . "</br>";
+
+			echo "</br></br>";
+
+			// printf allows you to print formatted Strings to the screen
+
+			echo "The randomString is $randString </br>";
+
+			printf ("The randomString is %s </br>", $randString);
+
+			// Coversion codes are useful with decimals
+
+			$decimalNum = 2.3456;
+
+			printf ("decimal num = %.2f </br>", $decimalNum);
+
+			// Other conversion codes
+			// b : integer to binary
+			// c : integer to character
+			// d : integer to decimal
+			// f : double to float
+			// o : integer to octal
+			// s : string to string
+			// x : integer to hexadecimal
+
+			printf ("10 to binary %b </br>", 10);
+
+			echo "</br></br>";
+
+			// String case functions
+
+			echo strtoupper($randString) . "</br>";
+			echo strtolower($randString) . "</br>";
+			echo ucfirst($randString) . "</br>";
+
+			echo "</br></br>";
+
+			// Turning strings into arrays and vice versa
+
+			$arrayForString = explode(' ', $randString, 2);
+
+			$stringToArray = implode(' ', $arrayForString);
+
+			echo "</br></br>";
+
+			// Get part of a string
+
+			$partOfString = substr("Random String", 0, 6);
+
+			echo "Part of String $partOfString </br>";
+
+			echo "</br></br>";
+
+			// Comparing Strings
+
+			$man = "Man";
+			$manhole = "Manhole";
+
+			// Returns 0 is equal
+			// Returns positive if str1 is greater then str2
+			// Returns negative if str1 is less than then str2
+			// strcasecmp() isn't case sensitive
+
+			echo strcmp($man, $manhole) . "</br>";
+
+			echo "</br></br>";
+
+			// strstr() returns every character after the sting to look for
+			// stristr() isn't case sensitive
+
+			echo "The String " . strstr($randString, "String") . "</br>";
+
+			echo "</br></br>";
+
+			// strpos() returns the location for the match
+
+			echo "Loc of String " . strpos($randString, "String") . "</br>";
+
+			echo "</br></br>";
+
+			// str_replace() replaces a string with another
+
+			$newString = str_replace("String", "Stuff", $randString)  . "</br>";
+
+			echo "New string " . $newString . "</br>";
+
+			echo "</br></br>";
+
+			// Escaping characters
+
+			$dbString = '"Random quotes"';
+
+			echo addslashes($dbString) . "</br>";
+			echo stripslashes($dbString) . "</br>";
+
+			echo "</br></br>";
+
+			// Get the data type for a variable
+
+			echo 'Data Type for $biggestNum is ' . gettype($biggestNum);
+
+			echo "</br></br>";
+
+			/* You can check for other types of data with
+				is_array : is_bool : is_double : is_int : is_null :
+				is_numeric : is_string
+			*/
+
+			// empty() returns true or false if a var has a non-zero value
+
+			echo 'Does $biggestNum exist ';
+			echo empty($biggestNum) ? 'false' : 'true';
+
+			echo "</br></br>";
+
+			// isset() returns true or false if a variable exists
+
+			echo 'Does $biggestNum exist ';
+			echo isset($biggestNum) ? 'true' : 'false';
+
+			echo "</br></br>";
+
+			// You can execute unix commands by surrounding with `s
+			echo `ls -la`; // Unix or OSX
+
+			// echo `dir /w`; WINDOWS
+
+			echo "</br></br>";
+
+			/*
+				Functions allow you to reuse code
+				A function must begin with a letter, but can contain
+				numbers and underscores
+			*/
+
+			function addNumbers($num1, $num2){
+
+				return $num1 + $num2;
+
+			}
+
+			echo "3 + 4 = " . addNumbers(3, 4);
+
+		?>
+
+	</body>
+
+</html>
