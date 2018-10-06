@@ -159,3 +159,49 @@ EOD;
 			// An if block will perform one action or another depending
 			// on conditions
 			if(5 == 10){
+
+				echo '5 = 10';
+
+			} else {
+
+				echo '5 != 10';
+
+			}
+
+			echo "</br></br>";
+
+			/*
+				elseif is used when you have more conditions to check
+			*/
+			$numOfOranges = 4;
+			$numOfBananas = 36;
+
+			if(($numOfOranges > 25) && ($numOfBananas > 30)){
+
+				echo '25% Discount';
+
+			} elseif (($numOfOranges > 30) || ($numOfBananas > 35)){
+
+				echo '15% Discount';
+
+			} elseif (!(($numOfOranges < 5)) || (!($numOfBananas < 5))){
+
+				echo '5% Discount';
+
+			} else {
+
+				echo 'No Discount For You';
+
+			}
+
+			echo "</br></br>";
+
+			// The ternary operator assigns one or another value
+			// depending on the condition
+			// condition ? value if true : value if false
+
+			$biggestNum = (15 > 10) ? 15 : 10;
+
+			echo 'Biggest Number is ' . $biggestNum;
+
+			echo "</br></br>";
