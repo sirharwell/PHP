@@ -489,7 +489,7 @@ EOD;
 
 			}
 
-			echo "3 + 4 = " . addNumbers(3, 4);
+			echo "4 + 3 = " . addNumbers(4, 3);
 
 		?>
 
